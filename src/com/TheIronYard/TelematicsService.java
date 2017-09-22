@@ -34,18 +34,18 @@ public class TelematicsService {
        try {
            // Write to a new file
            // Creates a new object that is assigned to the variable "fw"
-           FileWriter fw = new FileWriter(f);
-
-           // Convert our autoInfo to json (convert object to json)
-           ObjectMapper mapper = new ObjectMapper();
-
-           // I thought this method wasn't needed because the the file is already set to be a json and could be
-           // easily written into? Do we really need to create a string to add information into the file?
-           String json = mapper.writeValueAsString(autoInfo);
-
-           // Write the information into the json file
-           fw.write(json);
-           fw.close();
+//           FileWriter fw = new FileWriter(f);
+//
+//           // Convert our autoInfo to json (convert object to json)
+//           ObjectMapper mapper = new ObjectMapper();
+//
+//           // I thought this method wasn't needed because the the file is already set to be a json and could be
+//           // easily written into? Do we really need to create a string to add information into the file?
+//           String json = mapper.writeValueAsString(autoInfo);
+//
+//           // Write the information into the json file
+//           fw.write(json);
+//           fw.close();
 
            /*
 
@@ -156,10 +156,6 @@ public class TelematicsService {
        }
    }
 
-   static void writeDataToFile(){
-
-   }
-
    private static String getDataFromFile(File f) throws FileNotFoundException {
          Scanner fileScanner = new Scanner(f);
 
@@ -167,8 +163,6 @@ public class TelematicsService {
          while (fileScanner.hasNext()) {
             results = fileScanner.nextLine();
          }
-
-       // TODO: maybe write a "writeDataToFile" method????
 
        return results;
    }

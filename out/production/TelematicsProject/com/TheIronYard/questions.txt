@@ -1,0 +1,29 @@
+1. What is an objectmapper?
+    - This mapper (or, data binder, or codec) provides functionality for converting between Java objects
+      (instances of JDK provided core classes, beans), and matching JSON constructs. It will use instances of
+      JsonParser and JsonGenerator for implementing actual reading/writing of JSON.
+    - Uh....what?
+
+2. What does "instances" really mean?
+
+3. When we downloaded jackson-databind, was it a package that we downloaded so that we can use it? Same idea as
+   npm in JavaScript?
+
+4. Can we go over the private, public and protected?
+    - Which one provides the highest level of security? I thought it was "private"?
+    - When I overrode a method to change the private to protected, it said it will not work if move "less".
+
+5. What does serialization means?
+
+6. Line 42 in TelematicsServices.java
+   - I thought this method wasn't needed because the the file is already set to be a json and could be
+     easily written into? Do we really need to create a string to add information into the file?
+   - String json = mapper.writeValueAsString(autoInfo);
+
+7. Line 106 in TelematicsServices.java
+    - Why is the type being specified as VehicleInfo? Should it be a string, integer, double, etc?
+    - Is it because it is drawing in the field types from the class itself?
+    - ArrayList<VehicleInfo> vehicleInfos = new ArrayList<>();
+
+8.
+
